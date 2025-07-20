@@ -27,3 +27,21 @@ Step 4. Mengintegrasikan data APi ke komponen
 
 Poin Penilaian
 - [ ] Mengimplementasikan State Management
+
+# Fitur App
+- [x] Masuk
+      > implement login (user: admin password: admin) with fake auth
+- [x] Daftar
+- [x] Beranda
+- [x] Daftar Saya
+      > ProtectedRoute, user harus login
+- [x] Series
+- [x] Film
+- [x] Popup Series
+- [x] Popup Film
+- [ ] Tonton
+- [ ] Popup Premium
+- [ ] Profil
+- [ ] Paket
+- [ ] Pembayaran
+- [ ] Tunggu Pembayaran
