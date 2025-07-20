@@ -5,7 +5,7 @@ import PopupDetailCard from "./popup-detail-card";
 import { usePopupDetailStore } from "../../stores/use-popup-detail";
 import useLocalStorage from '../../services/api/myList-service';
 
-function MainContentTemplate({ hero, basePath, galleries }) {
+function MainContentTemplate({ hero, heroFilterBasePath, galleries }) {
     const { toggleId: idToggleHandler, checkId } = useLocalStorage(new Set());
     const { isOpen } = usePopupDetailStore();
 
@@ -31,7 +31,7 @@ function MainContentTemplate({ hero, basePath, galleries }) {
             {hero && (
                 <Hero
                     movie={hero}
-                    basePath={basePath}
+                    basePath={heroFilterBasePath}
                     paddingClass="
                             px-6 sm:px-10 md:px-20
                             py-4 sm:py-10 md:py-20

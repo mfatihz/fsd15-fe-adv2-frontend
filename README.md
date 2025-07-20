@@ -1,4 +1,4 @@
-# CHILL App Adv 12
+# CHILL App Adv 2
 
 Aplikasi ini dilengkapi dengan [backend](https://github.com/mfatihz/fsd15-fe-adv2-backend)
 
@@ -29,7 +29,7 @@ menyimpan hasil get data dari API ke state management
 - [ ] Daftarkan reducer ke store.js
 - [ ] Hubungkan store.js ke root aplikasi menggunakan Provider
 
-Step 4. Mengintegrasikan data APi ke komponen
+Step 4. Mengintegrasikan data API ke komponen
 1. Integrasi Get Data
 	- [ ] Gunakan fungsi Get API dari folder services/api
 	- [ ] Panggil reducer untuk mendapatkan data

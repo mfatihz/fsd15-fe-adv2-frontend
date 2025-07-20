@@ -35,7 +35,7 @@ export const toggleMyListId = async (userId, movieId) => {
 
 export const checkMovieId = async (userId, movieId) => {
     try {
-        const response = await axios.get(`${API_URL}/mylist/${userId}/${movieId}`);
+        const response = await axios.get(`${API_URL}/mylist/${userId}/watchlist/${movieId}`);
         return response.data.has;
     } catch (e) {
         console.error('Error getting MyList:', e);
@@ -53,7 +53,7 @@ export default function useLocalStorage() {
   const fetchIds = useCallback(async () => {
     try {
       // ids
-        const response = await getMyListIds(userId);
+      const response = await getMyListIds(userId);
       const newSet = new Set(response);
       setStoredIds(newSet);
       localStorage.setItem(key, JSON.stringify([...newSet]));
@@ -63,13 +63,9 @@ export default function useLocalStorage() {
       setGalleries(galleriesResponse);
     } catch (error) {
       console.error('Failed to fetch from API:', error);
-      try {
-        const item = localStorage.getItem(key);
-        if (item) {
-          setStoredIds(new Set(JSON.parse(item)));
-        }
-      } catch (localError) {
-        console.error('Failed to read from localStorage:', localError);
+      const item = localStorage.getItem(key);
+      if (item) {
+        setStoredIds(new Set(JSON.parse(item)));
       }
     } finally {
       setIsLoading(false);
@@ -86,11 +82,7 @@ export default function useLocalStorage() {
     } catch (error) {
       console.error('API failed, using localStorage only:', error);
       const newSet = new Set(storedIds);
-      if (newSet.has(movieId)) {
-        newSet.delete(movieId);
-      } else {
-        newSet.add(movieId);
-      }
+      newSet.has(movieId) ? newSet.delete(movieId) : newSet.add(movieId);
       setStoredIds(newSet);
       localStorage.setItem(key, JSON.stringify([...newSet]));
       return newSet.has(movieId);
@@ -99,7 +91,7 @@ export default function useLocalStorage() {
 
   useEffect(() => {
     fetchIds();
-  }, [userId, key, fetchIds, toggleId]);
+  }, [fetchIds]);
 
   const checkId = async (movieId) => {
     if (!isLoading) {
