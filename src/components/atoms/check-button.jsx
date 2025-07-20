@@ -6,9 +6,7 @@ function CheckButton({
   idToggleHandler,
   movieId,
   movieTitle,
-}) {
-  //const { toggleId: idToggleHandler, checkId } = useLocalStorage(new Set());
-  
+}) {  
   return (
     <ToggleIdButton
       checkId={checkId}

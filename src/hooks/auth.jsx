@@ -6,17 +6,6 @@ const fakeAuth = () =>
         setTimeout(() => resolve("2342f2f1d131rf12"), 250);
     });
 
-export const ProtectedRoute = ({ children }) => {
-    const { token } = useAuth();
-    const location = useLocation();
-
-    if (!token) {
-        return <Navigate to="/login" replace state={{ from: location }} />;
-    }
-
-    return children;
-}
-
 const AuthContext = createContext({
     token: "",
     onLogin: () => { },

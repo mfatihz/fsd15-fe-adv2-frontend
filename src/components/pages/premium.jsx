@@ -1,6 +1,6 @@
 const Premium = () => {
     return (
-        <main className="border">
+        <main className="flex flex-col gap-10">
             <h1>Kenapa Harus Berlangganan</h1>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <div>11</div>
@@ -12,8 +12,8 @@ const Premium = () => {
             </div>
             <div>
                 <h1>Pilih Paketmu</h1>
-                <p>temukan paket sesuai kebutuhanmu!</p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <p>Temukan paket sesuai kebutuhanmu!</p>
+                <div className="flex flex-col sm:flex-row gap-10">
                     <div>Individual</div>
                     <div>Berdua</div>
                     <div>Keluarga</div>
