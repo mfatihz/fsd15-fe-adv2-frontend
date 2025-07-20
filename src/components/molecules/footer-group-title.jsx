@@ -1,4 +1,4 @@
-import ToggleButton from "../atoms/toggle-button";
+import ToggleDropdownButton from "../atoms/toggle-dropdown-button";
 import clsx from 'clsx'
 
 const FooterGroupTitle = ({ title, isMobile, isOpen, onClick=()=>{} }) => {
@@ -10,7 +10,7 @@ const FooterGroupTitle = ({ title, isMobile, isOpen, onClick=()=>{} }) => {
         onClick={onClick}
         className={clsx("flex justify-between items-center text-lg font-semibold focus:outline-none", cursorPointer)}
       >
-        { title } { isMobile && <ToggleButton isOpen={isOpen} /> }
+        { title } { isMobile && <ToggleDropdownButton isOpen={isOpen} /> }
       </button>
   );
 };

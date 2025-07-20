@@ -80,6 +80,10 @@ const PopupDetailCard = ({
             closeHandler={closeHandler}
             paddingClass={heroPaddingClass}
             styleClass="mb-3 sm:mb-1"
+            checkId={checkId}
+      idToggleHandler={idToggleHandler}
+      movieId={movieData.id}
+      movieTitle={movieData.title}
           />
 
           <PopupContent movieData={movieData} paddingClass={paddingClass} />

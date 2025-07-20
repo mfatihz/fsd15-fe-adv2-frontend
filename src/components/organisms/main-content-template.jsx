@@ -3,7 +3,7 @@ import Hero from "./hero";
 import PosterGalleries from "./poster-galleries";
 import PopupDetailCard from "./popup-detail-card";
 import { usePopupDetailStore } from "../../stores/use-popup-detail";
-import useLocalStorage from "../../hooks/use-local-storage";
+import useLocalStorage from '../../services/api/myList-service';
 
 function MainContentTemplate({ hero, basePath, galleries }) {
     const { toggleId: idToggleHandler, checkId } = useLocalStorage(new Set());
