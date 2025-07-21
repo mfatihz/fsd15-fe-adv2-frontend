@@ -48,12 +48,13 @@ Step 4. Mengintegrasikan data API ke komponen
 
 Poin Penilaian
 - [x] Mengimplementasikan State Management
-	> Done: use various methods: React Redux + RTK Query + Zustand + custom Hook
+	> Done: use various methods (React Redux + RTK Query + Zustand + custom Hook) to keep data, e.g. auth data or state Check dan Add button.
 
 # Fitur App
 - [x] Masuk  
-	> Update: implement Login with fake auth (user: admin password: admin)  
-	> User harus Login agar dapat mengakses "Daftar Saya", menggunakan tombol "Check" pada Hover Card dan "Add" pada Popup Card.
+	> Update:  
+	> - Implement Login with fake auth (user: admin password: admin)  
+	> - User harus Login agar bisa mengakses "Daftar Saya", menggunakan tombol "Check" pada Hover Card dan "Add" pada Popup Card.
 - [x] Daftar
 - [x] Beranda
 - [x] Daftar Saya  
