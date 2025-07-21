@@ -14,38 +14,40 @@ untuk menjalankan aplikasi:
     
 Paradigma desain: [atomic design](https://github.com/mfatihz/fsd15-intermediate-1/blob/main/README.md)  
 
-Stack: (Vite + React + React Router + tailwind) + (axios + zustand) + (RTK Query)
+Stack: (Vite + React + React Router + tailwind) + (axios + zustand) + (React Redux + RTK Query)
 
 
 Step 3. Implementasi State management
 menyimpan hasil get data dari API ke state management
-- [ ] Pasang library Redux Toolkit dan React Redux
+- [x] Pasang library Redux Toolkit dan React Redux
 	```
 	npm install @reduxjs/toolkit react-redux
 	```
-- [ ] Buat folder store/redux
-- [ ] Buat file store.js dalam folder store/redux
+- [x] Buat folder store/redux
+- [x] Buat file store.js dalam folder store/redux
 - [ ] Buat file reducer. Isi: Initial State (array kosong yang akan diisi dengan data API), Reducer (menangani data API dan menyimpannya ke dalam state global)
 - [ ] Daftarkan reducer ke store.js
-- [ ] Hubungkan store.js ke root aplikasi menggunakan Provider
-
+- [x] Hubungkan store.js ke root aplikasi menggunakan Provider
+	> Done: use React Redux + RTK Query
 Step 4. Mengintegrasikan data API ke komponen
 1. Integrasi Get Data
-	- [ ] Gunakan fungsi Get API dari folder services/api
+	- [x] Gunakan fungsi Get API dari folder services/api
 	- [ ] Panggil reducer untuk mendapatkan data
 	- [ ] Tampilkan data di component ListView menggunakan useSelector yang digunakan untuk mengambil data dari state Redux
 	```
 	import {useSelector} from 'react-redux';
 	import {getData} from './services/api';
 	```
-
+	> Done: use RTK Query
 2. Integrasi Edit, Add, dan Delete:
 	- [ ] Add: gunakan fungsi Add API dari folder services/api untuk menambahkan data baru
 	- [ ] Edit: memperbarui data.
 	- [ ] Delte: menghapus data.
+	> Done: use GET untuk mendapatkan data galleries dan PUT untuk membuat/mengubah "Data Saya"
 
 Poin Penilaian
 - [ ] Mengimplementasikan State Management
+	> Done: use various methods: React Redux + RTK Query + Zustand + custom Hook
 
 # Fitur App
 - [x] Masuk
@@ -55,11 +57,16 @@ Poin Penilaian
 - [x] Daftar Saya
       > ProtectedRoute, user harus login
 - [x] Series
+      > Update fitur: Tombol Check hanya bisa dipakai jika user telah login
 - [x] Film
+      > Update fitur: Tombol Check hanya bisa dipakai jika user telah login
 - [x] Popup Series
+      > Update fitur: Tombol Add hanya bisa dipakai jika user telah login
 - [x] Popup Film
+      > Update fitur: Tombol Add hanya bisa dipakai jika user telah login
 - [ ] Tonton
 - [ ] Premium
+      > on progress
 - [ ] Popup Premium
 - [ ] Profil
 - [ ] Paket
