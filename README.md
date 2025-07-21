@@ -2,16 +2,16 @@
 
 Aplikasi ini dilengkapi dengan [backend](https://github.com/mfatihz/fsd15-fe-adv2-backend)
 
-- setting .env:  
+- Setting .env:  
     ```
     VITE_API_URL=http://localhost:5000/api
     ```
     
-- untuk menjalankan aplikasi:  
+- Untuk menjalankan aplikasi:  
     ```
 	npm run dev
 	```  
-	
+
 Paradigma desain: [atomic design](https://github.com/mfatihz/fsd15-intermediate-1/blob/main/README.md)  
 
 Stack: (Vite + React + React Router + tailwind) + (axios + zustand) + (React Redux + RTK Query)
@@ -28,7 +28,8 @@ menyimpan hasil get data dari API ke state management
 - [ ] Buat file reducer. Isi: Initial State (array kosong yang akan diisi dengan data API), Reducer (menangani data API dan menyimpannya ke dalam state global)
 - [ ] Daftarkan reducer ke store.js
 - [x] Hubungkan store.js ke root aplikasi menggunakan Provider
-	> Done: use React Redux + RTK Query
+	> Done: use React Redux + RTK Query  
+
 Step 4. Mengintegrasikan data API ke komponen
 1. Integrasi Get Data
 	- [x] Gunakan fungsi Get API dari folder services/api
