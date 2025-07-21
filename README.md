@@ -42,7 +42,7 @@ Step 4. Mengintegrasikan data API ke komponen
 2. Integrasi Edit, Add, dan Delete:
 	- [ ] Add: gunakan fungsi Add API dari folder services/api untuk menambahkan data baru
 	- [ ] Edit: memperbarui data.
-	- [ ] Delte: menghapus data.
+	- [ ] Delte: menghapus data.  
 	> Done: use GET untuk mendapatkan data galleries dan PUT untuk membuat/mengubah "Data Saya"
 
 Poin Penilaian
@@ -50,22 +50,22 @@ Poin Penilaian
 	> Done: use various methods: React Redux + RTK Query + Zustand + custom Hook
 
 # Fitur App
-- [x] Masuk
+- [x] Masuk  
       > implement login (user: admin password: admin) with fake auth
 - [x] Daftar
 - [x] Beranda
-- [x] Daftar Saya
+- [x] Daftar Saya  
       > ProtectedRoute, user harus login
-- [x] Series
+- [x] Series  
       > Update fitur: Tombol Check hanya bisa dipakai jika user telah login
-- [x] Film
+- [x] Film  
       > Update fitur: Tombol Check hanya bisa dipakai jika user telah login
-- [x] Popup Series
+- [x] Popup Series  
       > Update fitur: Tombol Add hanya bisa dipakai jika user telah login
-- [x] Popup Film
+- [x] Popup Film  
       > Update fitur: Tombol Add hanya bisa dipakai jika user telah login
 - [ ] Tonton
-- [ ] Premium
+- [ ] Premium  
       > on progress
 - [ ] Popup Premium
 - [ ] Profil
