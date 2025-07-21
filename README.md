@@ -46,7 +46,7 @@ Step 4. Mengintegrasikan data API ke komponen
 	> Done: use GET untuk mendapatkan data galleries dan PUT untuk membuat/mengubah "Data Saya"
 
 Poin Penilaian
-- [ ] Mengimplementasikan State Management
+- [x] Mengimplementasikan State Management
 	> Done: use various methods: React Redux + RTK Query + Zustand + custom Hook
 
 # Fitur App
