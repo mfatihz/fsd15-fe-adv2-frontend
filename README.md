@@ -2,18 +2,16 @@
 
 Aplikasi ini dilengkapi dengan [backend](https://github.com/mfatihz/fsd15-fe-adv2-backend)
 
-setting .env:  
+- setting .env:  
     ```
     VITE_API_URL=http://localhost:5000/api
     ```
     
-untuk menjalankan aplikasi:  
-	```
-	npm run dev
-    ```
+- untuk menjalankan aplikasi:  
     ```
 	npm run dev
-	```
+	```  
+	
 Paradigma desain: [atomic design](https://github.com/mfatihz/fsd15-intermediate-1/blob/main/README.md)  
 
 Stack: (Vite + React + React Router + tailwind) + (axios + zustand) + (React Redux + RTK Query)
