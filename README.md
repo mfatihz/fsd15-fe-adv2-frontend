@@ -8,10 +8,12 @@ setting .env:
     ```
     
 untuk menjalankan aplikasi:  
+	```
+	npm run dev
     ```
-    npm run dev
     ```
-    
+	npm run dev
+	```
 Paradigma desain: [atomic design](https://github.com/mfatihz/fsd15-intermediate-1/blob/main/README.md)  
 
 Stack: (Vite + React + React Router + tailwind) + (axios + zustand) + (React Redux + RTK Query)
