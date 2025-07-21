@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
+import { useAuth } from "../../hooks/auth";
 
 function ToggleIdButton({
   checkId = () => Promise.resolve(false),
@@ -10,7 +11,8 @@ function ToggleIdButton({
   icon,
 }) {
   const [isChecked, setIsChecked] = useState(false);
-
+  const {userId} = useAuth();
+  
   // Handle async isChecked function
   useEffect(() => {
     async function fetchCheckedStatus() {
@@ -26,11 +28,11 @@ function ToggleIdButton({
     await idToggleHandler(movieId);
     const newCheckedStatus = await checkId(movieId);
     setIsChecked(newCheckedStatus);
-    toast(
+    userId ? toast(
       `${movieTitle} berhasil ${
         newCheckedStatus ? "dihapus dari" : "ditambahkan ke"
       } Daftar Saya`
-    );
+    ) : toast('Login dulu agar bisa menambahkan ke Daftar Saya');
   };
 
   const baseStyle = `flex items-center justify-center 

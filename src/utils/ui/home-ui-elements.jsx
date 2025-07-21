@@ -1,6 +1,7 @@
 import UserIcon from "../../components/atoms/user-icon"
 import StarIcon from "../../components/atoms/star-icon"
 import ExitIcon from "../../components/atoms/exit-icon"
+import { useAuth } from "../../hooks/auth"
 
 export const navData = [
   { id: 1, children: "Series", to: "/series" },
@@ -8,11 +9,16 @@ export const navData = [
   { id: 3, children: "Daftar Saya", to: "/lists" },
 ]
 
-export const menuData = [
+export const useMenuData = () => {
+  const { userId } = useAuth();
+
+  return [
+  
+
   { id: 1, icon: <UserIcon />, text: "Profil Saya", to: "/profile" },
   { id: 2, icon: <StarIcon />, text: "Ubah Premium", to: "/premium" },
-  { id: 3, icon: <ExitIcon />, text: "Keluar", to: "/logout" },
-]
+  { id: 3, icon: <ExitIcon />, text: userId ? "Keluar" : "Masuk", to: "/logout" },
+]}
 
 export const genreData = {
   title: "Genre",

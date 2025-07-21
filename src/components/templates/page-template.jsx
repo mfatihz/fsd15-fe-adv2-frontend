@@ -6,7 +6,7 @@ import Footer from "../organisms/home-footer";
 import { Outlet } from "react-router";
 import {
     navData,
-    menuData,
+    useMenuData,
     genreData,
     helpData,
 } from "../../utils/ui/home-ui-elements";
@@ -19,6 +19,7 @@ function PageTemplate() {
     };
 
     const { isOpen } = usePopupDetailStore();
+    const menuData = useMenuData();
 
     useEffect(() => {
         if (isOpen) {

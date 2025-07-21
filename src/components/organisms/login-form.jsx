@@ -1,4 +1,3 @@
-import { useState } from "react";
 import InputWithLabel from "../molecules/input-with-label";
 import PasswordField from "../molecules/password-field";
 import FormLinks from "../molecules/form-links";
@@ -7,7 +6,6 @@ import GoogleButton from "../atoms/google-button";
 import { useAuth } from "../../hooks/auth";
 
 const LoginForm = () => {
-    const [error, setError] = useState("");
     const { onLogin } = useAuth();
 
     const handleSubmit = (e) => {
@@ -17,16 +15,16 @@ const LoginForm = () => {
 
         // Validasi sederhana
         if (!username || !password) {
-            setError("Username dan password harus diisi\n\nHint:\nUsername = admin\nKata Sandi = admin");
+            alert("Username dan password harus diisi\n\nHint:\nUsername = admin\nKata Sandi = admin");
             return;
         }
 
         // Simulasi login berhasil
         if (username === "admin" && password === "admin") {
             // navigate("/"); // Navigasi ke Home jika berhasil
-            onLogin();
+            onLogin(username);
         } else {
-            setError("Username atau password salah\n\nHint:\nUsername = admin\nKata Sandi = admin");
+            alert("Username atau password salah\n\nHint:\nUsername = admin\nKata Sandi = admin");
         }
     };
 
@@ -38,7 +36,6 @@ const LoginForm = () => {
                     onSubmit={handleSubmit}
                     className="flex flex-col gap-5 w-full"
                 >
-                    {error && alert(error)}
                     <InputWithLabel label="Username" type="text" id="username" name="username" placeholder="Masukkan username" />
                     <PasswordField />
                 </form>
