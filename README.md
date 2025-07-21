@@ -51,19 +51,19 @@ Poin Penilaian
 
 # Fitur App
 - [x] Masuk  
-      > implement login (user: admin password: admin) with fake auth
+      > Update: implement login (user: admin password: admin) with fake auth
 - [x] Daftar
 - [x] Beranda
 - [x] Daftar Saya  
       > ProtectedRoute, user harus login
 - [x] Series  
-      > Update fitur: Tombol Check hanya bisa dipakai jika user telah login
+      > Update: Tombol Check hanya bisa dipakai jika user telah login
 - [x] Film  
-      > Update fitur: Tombol Check hanya bisa dipakai jika user telah login
+      > Update: Tombol Check hanya bisa dipakai jika user telah login
 - [x] Popup Series  
-      > Update fitur: Tombol Add hanya bisa dipakai jika user telah login
+      > Update: Tombol Add hanya bisa dipakai jika user telah login
 - [x] Popup Film  
-      > Update fitur: Tombol Add hanya bisa dipakai jika user telah login
+      > Update: Tombol Add hanya bisa dipakai jika user telah login
 - [ ] Tonton
 - [ ] Premium  
       > on progress
